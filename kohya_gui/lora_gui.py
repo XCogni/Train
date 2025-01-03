@@ -2054,7 +2054,7 @@ def lora_tab(
                 with gr.Row() as network_row:
                     network_dim = gr.Slider(
                         minimum=1,
-                        maximum=512,
+                        maximum=10000,
                         label="Network Rank (Dimension)",
                         value=8,
                         step=1,
@@ -2062,7 +2062,7 @@ def lora_tab(
                     )
                     network_alpha = gr.Slider(
                         minimum=0.00001,
-                        maximum=1024,
+                        maximum=10000,
                         label="Network Alpha",
                         value=1,
                         step=0.00001,
@@ -2073,14 +2073,14 @@ def lora_tab(
                     # locon= gr.Checkbox(label='Train a LoCon instead of a general LoRA (does not support v2 base models) (may not be able to some utilities now)', value=False)
                     conv_dim = gr.Slider(
                         minimum=0,
-                        maximum=512,
+                        maximum=10000,
                         value=1,
                         step=1,
                         label="Convolution Rank (Dimension)",
                     )
                     conv_alpha = gr.Slider(
                         minimum=0,
-                        maximum=512,
+                        maximum=10000,
                         value=1,
                         step=1,
                         label="Convolution Alpha",
